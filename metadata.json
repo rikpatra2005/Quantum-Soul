@@ -1,0 +1,6 @@
+{
+  "name": "QuantumAI-HIV | SIH 2026",
+  "description": "Secure Edge-Cloud Portal for Healthcare Professionals featuring IoT Telemetry, Classical ML Ensemble, 4-Qubit VQC Quantum Engine, and ZVI Heatmaps.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
