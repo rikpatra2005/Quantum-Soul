@@ -1,12 +1,12 @@
 import React from 'react';
-import { Dna, Atom, ShieldCheck, LogOut, Rocket, Mic, Github } from 'lucide-react';
+import { Dna, Atom, ShieldCheck, LogOut, Mic } from 'lucide-react';
 
 interface NavbarProps {
   doctorName: string;
   activeTab: string;
   setActiveTab: (tab: string) => void;
   onLogout: () => void;
-  onOpenDeployGuide: () => void;
+  onOpenDeployGuide?: () => void;
   onOpenPitchScript: () => void;
 }
 
@@ -53,15 +53,6 @@ export const Navbar: React.FC<NavbarProps> = ({
             <Mic className="w-3.5 h-3.5" />
             Hackathon Script (SIH)
           </button>
-          <span className="text-slate-600">|</span>
-          <button
-            id="btn-nav-github-deploy"
-            onClick={onOpenDeployGuide}
-            className="flex items-center gap-1 text-cyan-300 hover:text-cyan-200 transition-colors cursor-pointer font-medium"
-          >
-            <Github className="w-3.5 h-3.5" />
-            Deploy (rikpatra2005)
-          </button>
         </div>
       </div>
 
@@ -100,16 +91,6 @@ export const Navbar: React.FC<NavbarProps> = ({
                 <span className="font-semibold text-slate-800">{doctorName}</span>
               </div>
             </div>
-
-            <button
-              id="btn-header-deploy-guide"
-              onClick={onOpenDeployGuide}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-lg bg-blue-700 hover:bg-blue-800 text-white shadow-xs transition-colors cursor-pointer"
-            >
-              <Rocket className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">Launch / Deploy Guide</span>
-              <span className="sm:hidden">Deploy</span>
-            </button>
 
             <button
               id="btn-header-logout"
